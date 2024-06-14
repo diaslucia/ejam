@@ -1,0 +1,54 @@
+@import "@/styles/theme.scss";
+
+.review_container {
+  display: none;
+}
+
+@media (width >= $queryLg) {
+  .review_container {
+    display: block;
+    @include w-h(100%, auto);
+    @include flex(column, center, flex-start, 10px);
+    background: $white;
+    padding: 15px;
+    border-radius: 10px;
+    .header {
+      @include flex(row, center, center, 15px);
+      .picture {
+        @include w-h(65px, 65px);
+        object-fit: cover;
+        border-radius: 100%;
+      }
+      .text_container {
+        @include flex(column, center, flex-start, 5px);
+      }
+      .stars_container {
+        @include flex(row, center, center, 3px);
+        .icon {
+          @include w-h(18px, auto);
+          object-fit: contain;
+        }
+      }
+      .user_container {
+        @include flex(row, center, center, 15px);
+        .name {
+          @include font(16px, 600);
+          color: $text_primary;
+        }
+        .verified {
+          @include flex(row, center, center, 5px);
+          @include font(15px, 400);
+          color: $grenish;
+          .icon {
+            @include w-h(20px, 20px);
+            object-fit: contain;
+          }
+        }
+      }
+    }
+    .review {
+      @include font(16px, 400);
+      color: $text_secondary;
+    }
+  }
+}

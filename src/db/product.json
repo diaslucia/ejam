@@ -1,0 +1,28 @@
+[
+  {
+    "title": "<span>ONE TIME ONLY</span> special price for 6 extra clarifion for only <span>$14 each</span> ($84.00 total!)",
+    "subtitle": "clarifion air ionizer",
+    "sale": 84,
+    "price": 180,
+    "stock": 12,
+    "stars": 5,
+    "description": "Simply plug a Clarifion into any standard outlet and replace bulky, expensive air purifiers with a simple.",
+    "detail": [
+      "Negative Ion Technology may <b>help with allergens</b>",
+      "Designed for <b>air rejuvenation</b>",
+      "<b>Perfect for every room</b> in all types of places"
+    ],
+    "discount": "Save 53% and get 6 extra Clarifision for only $14 Each",
+    "picture": "/assets/images/card-picture.png",
+    "thumbnail": "/assets/images/card-thumbnail.png",
+    "reviews": [
+      {
+        "picture": "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Ken T.",
+        "review": "“As soon as the Clarifions arrived I put one in my bedroom. This was late in the afternoon. When I went to the bedroom in the evening it smelled clean. When I went to bed I felt I could breathe better. Wonderful.“",
+        "verified": true,
+        "stars": 5
+      }
+    ]
+  }
+]

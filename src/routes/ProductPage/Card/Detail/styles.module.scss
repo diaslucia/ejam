@@ -1,0 +1,97 @@
+@import "@/styles/theme";
+
+.detail_container {
+  @include w-h(100%, auto);
+  @include flex(row, flex-start, flex-start, 10px);
+  .image {
+    @include w-h(100px, auto);
+    object-fit: contain;
+  }
+  .inner_container {
+    @include w-h(100%, auto);
+    @include flex(column, center, flex-start, 15px);
+    .titles_container {
+      @include w-h(100%, auto);
+      @include flex(row, space-between, center, 5px);
+      .subtitle {
+        @include font(14px, 500);
+        color: $black;
+        text-transform: capitalize;
+      }
+      .price {
+        @include flex(row, center, center, 5px);
+        @include font(16px, 600);
+        color: $blue;
+        span {
+          @include font(12px, 400);
+          color: $text_secondary;
+          text-decoration: line-through;
+        }
+      }
+    }
+    .stars_container {
+      @include flex(row, center, center, 5px);
+      .star {
+        @include w-h(15px, auto);
+        object-fit: contain;
+      }
+    }
+    .stock_container {
+      @include flex(row, center, center, 5px);
+      .stock {
+        @include font(14px, 400);
+        color: $grey;
+      }
+    }
+    .description_one {
+      display: none;
+    }
+  }
+}
+.description_two {
+  @include w-h(100%, auto);
+  @include font(12px, 400);
+  text-align: center;
+  color: $text_secondary;
+}
+
+@media (width >= $queryLg) {
+  .detail_container {
+    @include flex(row, flex-start, flex-start, 20px);
+    .image {
+      @include w-h(auto, 150px);
+    }
+    .inner_container {
+      @include w-h(auto, 150px);
+      @include flex(column, space-between, flex-start);
+      .titles_container {
+        .subtitle {
+          @include font(20px, 500);
+        }
+        .price {
+          @include flex(row, center, center, 15x);
+          @include font(22px, 600);
+          span {
+            @include font(16px, 400);
+          }
+        }
+      }
+      .stock_container {
+        @include flex(row, center, center, 20px);
+        .stock {
+          @include font(16px, 400);
+        }
+      }
+      .description_one {
+        display: block;
+        @include w-h(100%, auto);
+        @include font(14px, 400);
+        text-align: left;
+        color: $text_secondary;
+      }
+    }
+  }
+  .description_two {
+    display: none;
+  }
+}

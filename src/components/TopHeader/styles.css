@@ -1,0 +1,11 @@
+.swiper-button-next,
+.swiper-button-prev {
+  filter: brightness(0) invert(1);
+}
+
+@media (width >= 1024px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}

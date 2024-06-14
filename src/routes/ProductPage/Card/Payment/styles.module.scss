@@ -1,0 +1,78 @@
+@import "@/styles/theme.scss";
+
+.payment_container {
+  @include w-h(100%, auto);
+  padding: 10px;
+  border: 1px solid $lightGrey;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-areas:
+    "ship security"
+    "logos logos";
+  align-items: center;
+  justify-content: center;
+  .shipping {
+    grid-area: ship;
+    color: $text_secondary;
+    @include font(10px, 500);
+    text-align: center;
+    border-right: 1px solid $lightGrey;
+  }
+  .security {
+    grid-area: security;
+    @include flex(row, center, center, 5px);
+    .security_icon {
+      @include w-h(13px, auto);
+      object-fit: contain;
+    }
+    .security_text {
+      @include font(10px, 500);
+      color: $text_secondary;
+    }
+  }
+  .logo_container {
+    grid-area: logos;
+    @include flex(row, center, center, 5px);
+    border-top: 1px solid $lightGrey;
+    padding-top: 10px;
+    margin-top: 10px;
+    .logo {
+      @include w-h(35px, auto);
+      object-fit: contain;
+    }
+  }
+}
+
+@media (width >= $queryLg) {
+  .payment_container {
+    @include w-h(100%, auto);
+    padding: 8px;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    border-radius: 4px;
+    grid-template-areas: "ship security logos";
+    .shipping {
+      @include font(10px, 500);
+      border-right: 1px solid $lightGrey;
+    }
+    .security {
+      border-right: 1px solid $lightGrey;
+      .security_icon {
+        @include w-h(15px, auto);
+      }
+      .security_text {
+        @include font(10px, 500);
+      }
+    }
+    .logo_container {
+      grid-area: logos;
+      @include flex(row, center, center, 5px);
+      border-top: none;
+      padding-top: 0px;
+      margin-top: 0px;
+      .logo {
+        @include w-h(20px, auto);
+      }
+    }
+  }
+}

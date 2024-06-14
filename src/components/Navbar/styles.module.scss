@@ -1,0 +1,37 @@
+@import "@/styles/theme";
+
+.nav_container {
+  @include w-h(100%, auto);
+  @include flex(row, space-between, center);
+  padding: 20px;
+  background-color: $white;
+  .link {
+    .logo {
+      @include w-h(140px, auto);
+      object-fit: contain;
+    }
+  }
+  .logo_container {
+    @include flex(row, center, center, 20px);
+    .logo_secondary {
+      @include w-h(50px, auto);
+      object-fit: contain;
+    }
+  }
+}
+
+@media (width >= $queryLg) {
+  .nav_container {
+    padding: 20px 0;
+    .link {
+      .logo {
+        @include w-h(200px, auto);
+      }
+    }
+    .logo_container {
+      .logo_secondary {
+        @include w-h(80px, auto);
+      }
+    }
+  }
+}

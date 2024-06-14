@@ -1,0 +1,31 @@
+@import "@/styles/theme.scss";
+
+.btn_confirm {
+  @include w-h(100%, auto);
+  @include flex(row, center, center, 5px);
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 10px;
+  border: none;
+  background: $green;
+  outline: none;
+  color: $white;
+  @include font(14px, 600);
+  text-transform: uppercase;
+  transition: background 200ms ease-in;
+  &:hover {
+    background: $lightGreen;
+  }
+  .icon {
+    @include w-h(25px, auto);
+  }
+}
+
+@media (width >= $queryLg) {
+  .btn_confirm {
+    @include font(18px, 600);
+    .icon {
+      @include w-h(30px, auto);
+    }
+  }
+}

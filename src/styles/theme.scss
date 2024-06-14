@@ -1,0 +1,41 @@
+// Colors
+$text_primary: #381d2a;
+$text_secondary: #4d5254;
+
+$blue: #2c7ef8;
+$lightBlue: #edf3fd;
+$grey: #37465a;
+$lightGrey: #cfcfcf;
+$darkBlue: #252f3d;
+$green: #59ae43;
+$lightGreen: #67c250;
+$grenish: #5bb59a;
+$lightBackground: #fafafa;
+
+$white: #fff;
+$black: black;
+$error: #f82c2c;
+
+// Media querys
+$queryXs: 480px;
+$querySm: 640px;
+$queryMd: 768px;
+$queryLg: 1024px;
+$queryXl: 1400px;
+
+//Mixins
+@mixin flex($direction, $justify, $align, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+@mixin w-h($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin font($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}

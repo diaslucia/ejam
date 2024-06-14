@@ -1,0 +1,120 @@
+@import "@/styles/theme";
+
+.card_container {
+  @include flex(column, center, center, 20px);
+  .card_header {
+    @include flex(column, center, center, 20px);
+    .picture_one {
+      display: none;
+    }
+    .title {
+      @include font(23px, 400);
+      text-transform: capitalize;
+      text-align: center;
+      color: $black;
+      span {
+        color: $blue;
+      }
+    }
+    .picture_two {
+      @include w-h(100%, 100%);
+      object-fit: contain;
+    }
+  }
+  .info_header {
+    @include flex(column, center, center, 20px);
+    .list_container {
+      @include flex(column, center, flex-start, 10px);
+      .list_item {
+        @include flex(row, center, center, 10px);
+        list-style: none;
+        @include font(12px, 400);
+        color: $text_secondary;
+        img {
+          @include w-h(20px, 20px);
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  .card_bottom {
+    display: flex;
+    .column_container {
+      @include flex(column, center, center, 20px);
+      .button {
+        @include w-h(100%, auto);
+        @include font(13px, 400);
+        border: none;
+        text-transform: uppercase;
+        color: $error;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+      .warranty_container {
+        @include w-h(100%, auto);
+        @include flex(row, center, center, 20px);
+        .logo {
+          @include w-h(45px, auto);
+          object-fit: contain;
+        }
+        .warranty_text {
+          @include font(13px, 400);
+          color: $text_secondary;
+        }
+      }
+    }
+  }
+}
+
+@media (width >= $queryLg) {
+  .card_container {
+    background-color: $lightBackground;
+    padding: 30px;
+    border-radius: 10px;
+    .card_header {
+      @include flex(row, center, center, 30px);
+      .picture_one {
+        display: block;
+        @include w-h(auto, 650px);
+        object-fit: contain;
+      }
+      .info_header {
+        @include w-h(100%, 650px);
+        @include flex(column, space-between, flex-start, 20px);
+        .title {
+          @include font(35px, 400);
+          text-align: left;
+        }
+        .picture_two {
+          display: none;
+        }
+        .list_container {
+          .list_item {
+            @include font(16px, 400);
+            img {
+              @include w-h(25px, 25px);
+            }
+          }
+        }
+      }
+    }
+    .card_bottom {
+      display: grid;
+      grid-template-columns: 632px auto;
+      gap: 20px;
+      .column_container {
+        .button {
+          @include font(16px, 400);
+        }
+        .warranty_container {
+          .logo {
+            @include w-h(85px, auto);
+          }
+          .warranty_text {
+            @include font(16px, 400);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import "@/styles/theme";
+
+.topheader_container {
+  @include w-h(100%, 50px);
+  @include flex(row, center, center);
+  background-color: $darkBlue;
+  .inner_container {
+    @include w-h(100%, auto);
+    margin: 0 auto;
+    .text_container {
+      @include flex(row, center, center, 5px);
+      p {
+        color: $white;
+        @include font(12px, 200px);
+        text-transform: uppercase;
+      }
+      img {
+        @include w-h(20px, 20px);
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (width >= $queryLg) {
+  .topheader_container {
+    .inner_container {
+      max-width: 1200px;
+      @include flex(row, space-between, center, 10px);
+      .text_container {
+        @include flex(row, center, center, 5px);
+        p {
+          color: $white;
+          @include font(12px, 200px);
+          text-transform: uppercase;
+        }
+        img {
+          @include w-h(20px, 20px);
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@media (width >= $queryXl) {
+  .topheader_container {
+    .inner_container {
+      max-width: 1400px;
+    }
+  }
+}

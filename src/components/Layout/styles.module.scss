@@ -1,0 +1,25 @@
+@import "@/styles/theme";
+
+.container {
+  @include w-h(100%, auto);
+  .inner_container {
+    @include w-h(100%, auto);
+    margin: 0 auto;
+  }
+}
+
+@media (width >= $queryLg) {
+  .container {
+    .inner_container {
+      max-width: 1200px;
+    }
+  }
+}
+
+@media (width >= $queryXl) {
+  .container {
+    .inner_container {
+      max-width: 1400px;
+    }
+  }
+}
